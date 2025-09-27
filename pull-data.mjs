@@ -73,8 +73,7 @@ function postprocessPoJson(jsonData) {
 }
 
 const forbiddenTags = [
-  "cdda-experimental-2021-07-09-1837", // this release had broken json
-  "cdda-experimental-2021-07-09-1719",
+  "cataclysm-tlg-1.0-2025-09-20-1949", // this release had broken json
 ];
 
 /** @param {string | Buffer} zip */
