@@ -105,12 +105,12 @@ export default async function run({ github, context, dryRun = false }) {
   console.log("Fetching release list...");
 
   const { data: releases } = await github.rest.repos.listReleases({
-    owner: "CleverRaven",
-    repo: "Cataclysm-DDA",
+    owner: "Cataclysm-TLG",
+    repo: "Cataclysm-TLG",
   });
 
   const latestRelease = releases.find((r) =>
-    r.tag_name.startsWith("cdda-experimental-"),
+    r.tag_name.startsWith("cataclysm-tlg-1.0-"),
   )?.tag_name;
 
   console.log(`Latest experimental: ${latestRelease}`);
@@ -210,8 +210,8 @@ export default async function run({ github, context, dryRun = false }) {
     console.log(`Fetching source...`);
 
     const { data: zip } = await github.rest.repos.downloadZipballArchive({
-      owner: "CleverRaven",
-      repo: "Cataclysm-DDA",
+      owner: "Cataclysm-TLG",
+      repo: "Cataclysm-TLG",
       ref: tag_name,
     });
 
