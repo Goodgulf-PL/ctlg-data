@@ -72,8 +72,9 @@ function postprocessPoJson(jsonData) {
   return json;
 }
 
-const forbiddenTags = [
-  "cataclysm-tlg-1.0-2025-09-20-1949", // this release had broken json
+const forbiddenTags = [ 
+  "cataclysm-tlg-1.0-2025-09-20-1949",
+  "cataclysm-tlg-1.0-2026-01-17-0511", // this release had broken json
 ];
 
 /** @param {string | Buffer} zip */
